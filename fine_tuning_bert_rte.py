@@ -86,6 +86,7 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
 model_name = "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli"
+#model_name = "MoritzLaurer/DeBERTa-v3-base-mnli-fever-docnli-ling-2c"
 tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True, model_max_length=512)
 model = AutoModelForSequenceClassification.from_pretrained(model_name)
 
