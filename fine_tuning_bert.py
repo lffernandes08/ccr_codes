@@ -11,7 +11,7 @@ set_seed(42)
 df = pd.read_csv("your_dataset.csv")
 
 from sklearn.model_selection import train_test_split
-df_train, df_test = train_test_split(df, test_size=0.2, random_state=42) # Change the test size
+df_train, df_test = train_test_split(df, test_size=0.2, random_state=42) # Change the test set size
 
 df_train = df_train[["label", "label_text", "text"]] # Suggested names for dataset columns
 df_test = df_test[["label", "label_text", "text"]]
