@@ -13,7 +13,7 @@ df = pd.read_csv("your_dataset.csv")
 from sklearn.model_selection import train_test_split
 df_train, df_test = train_test_split(df, test_size=0.2, random_state=42) # Change the test size
 
-df_train = df_train[["label", "label_text", "text"]] # The dataset columns must be named like this
+df_train = df_train[["label", "label_text", "text"]] # Suggested names for dataset columns
 df_test = df_test[["label", "label_text", "text"]]
 
 # Labels defined for vaccine-related headlines
@@ -46,7 +46,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"Device: {device}")
 model.to(device);
 
-# Converting pandas dfs to Hugging Face dataset
+# Converting pandas dfs to Hugging Face dataset objects
 import datasets
 
 dataset = datasets.DatasetDict({
