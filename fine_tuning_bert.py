@@ -37,7 +37,8 @@ id2label
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, AutoConfig
 import torch
 
-model_name = "microsoft/deberta-v3-base" # Change to "microsoft/deberta-v3-large"
+model_name = "microsoft/deberta-v3-base"
+#model_name = "microsoft/deberta-v3-large"
 tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True, model_max_length=512)
 config = AutoConfig.from_pretrained(model_name, label2id=label2id, id2label=id2label, num_labels=len(label2id));
 model = AutoModelForSequenceClassification.from_pretrained(model_name, config=config, ignore_mismatched_sizes=True);
